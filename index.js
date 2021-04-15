@@ -8,42 +8,28 @@ function promptUser() {
     return inquirer.prompt([
         {
             type: "input",
-            name: "project_title",
-            message: "What is your project tittled?"
+            name: "Dogs Name",
+            message: "What dog breed?"
           },
           {
             type: "input",
             name: "description",
-            message: "Briefly describe your project"
+            message: "Briefly describe your dog/dogs?"
           },
           {
             type: "input",
-            name: "install",
-            message: "Are there any installations required?"
+            name: "Age of dog",
+            message: "How old is your dog?"
           },
           {
             type: "input",
-            name: "use",
-            message: "What is the use of the application"
+            name: "Food",
+            message: "What food does your dog eat?"
           },
           {
             type: "input",
-            name: "contributions",
-            message: "Are there any contribution rules?"
-          },
-          {
-            type: "input",
-            name: "test",
-            message: "Please provide test instructions if applicable"
-          },
-          {
-            type: "checkbox",
-            message: "License?",
-            name: "license",
-            choices: [
-              "[MIT License](LICENSE.txt)", 
-              "[GNU GPLv3 License](COPYING.txt)", 
-            ]
+            name: "Grooming",
+            message: "How many times if any do you groom your dog?"
           },
           {
             type: "input",
@@ -61,15 +47,6 @@ function promptUser() {
 function generateREADME(answers) {
   return `# ${answers.project_title}
     
-#### Table of Contents
-1. [Project Description](#project-description)
-2. [Installation Instructions](#installation-instructions)
-3. [Usage Information](#usage-information)
-4. [Contributor Guidelines](#contributor-guidelines)
-5. [Code of Conduct](#code-of-conduct)
-6. [Test Instructions](#test-instructions)
-7. [License](#license)
-8. [Questions](#questions)
 ## Project Description
 * ${answers.description}
 ## Installation Instructions
